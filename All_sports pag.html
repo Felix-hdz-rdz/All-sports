@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Sports - Tienda de Deportes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #308a96;
+        }
+        header {
+            background-color: #050e5c;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .cart, .payment-methods {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 30%;
+            margin: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #b44949;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNl_lS_tIk7rhJ0Kk5zDoaEYqnMOFVGQVX4A&s"
+    </h1>     
+    
+    <p>¡Tu tienda deportiva en línea! Estamos comprometidos con la excelencia en todo lo que hacemos y esperamos compartir nuestra pasión con todos ustedes</p>
+    
+</header>
+    
+
+<section class="container">
+    <!-- Lista de productos -->
+    <div class="product">
+        <img src="https://i5.walmartimages.com/asr/a2ae8216-2802-4fc1-8d7e-62ab67e7fbf4.88965f8536cabd269dd59b99ed18cd21.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Producto 2">
+        <h2>Pelota de Fútbol</h2>
+        <p>Precio: $300</p>
+        <button onclick="addToCart('Pelota de Fútbol', 300)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://contents.mediadecathlon.com/p2486925/k$04b378f68d8cd9acbbfcb04eb3c399c6/raqueta-de-tenis-adulto-tr500-azul.jpg?format=auto&quality=40&f=452x452" alt="Producto 2">
+        <h2>Raqueta de Tenis</h2>
+        <p>Precio: $180</p>
+        <button onclick="addToCart('Raqueta de Tenis', 180)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Producto 3">
+        <h2>Balón de Baloncesto</h2>
+        <p>Precio: $700</p>
+        <button onclick="addToCart('Balón de Baloncesto', 700)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://static.nike.com/a/images/t_default/d7f98572-28fb-45dc-8a35-6a27bdfce896/FCB+MNK+DF+STRK+SS+TOP+K.png" alt="Producto 3">
+        <h2>Jersey FC Barcelona</h2>
+        <p>Precio: $1200</p>
+        <button onclick="addToCart('Jersey FC Barcelona', 1200)">Agregar al carrito</button>
+    </div>
+
+     <div class="product">
+        <img src="https://assets.adidas.com/images/w_180,f_auto,q_auto,fl_lossy,c_fill,g_auto/206af7fc7bd445bfaf2baf43010c0c3b_9366/Banda_de_Sudor_de_Tenis_AEROREADY_Negro_IC3563_00_plp_standard.jpg">
+        <h2>Banda Adidas</h2>
+        <p>Precio: $200</p>
+        <button onclick="addToCart('Banda Adidas', 200)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://articulospromocionalescdmx.com/wp-content/uploads/2022/11/20042022153540_T186.jpg">
+        <h2>Termo de Agua</h2>
+        <p>Precio: $60</p>
+        <button onclick="addToCart('Termo de Agua', 60)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://grupomedicastore.mx/2446-medium_default/venta-de-set-de-mancuernas-para-rehabilitacion-fisica-en-mexico.jpg">
+        <h2>Mancuernas</h2>
+        <p>Precio: $200</p>
+        <button onclick="addToCart('Mancuernas', 200)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://rmcorp.s3.scarfbot.com/badger/common/photos/products/2023/06/29/3aae15d72a6916b2e043d5373838331f.jpg?size=350,400">
+        <h2>Camisa UnderArmour</h2>
+        <p>Precio: $560</p>
+        <button onclick="addToCart('Camisa UnderArmour', 560)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_889985-MLM76942768797_062024-O.webp">
+        <h2>Tachones Nike</h2>
+        <p>Precio: $2300</p>
+        <button onclick="addToCart('Tachones Nike', 2300)">Agregar al carrito</button>
+    </div>
+
+
+
+</section>
+
+<section class="container">
+    <!-- Carrito de compras -->
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-noO66lcCJyHMbgLFdNUW2mDVg8608fikvg&s">
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+        <button onclick="checkout()">Proceder al Pago</button>
+    </div>
+
+    <!-- Métodos de pago -->
+    <div class="payment-methods">
+        <h2>Métodos de Pago</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Three_credit_cards-_Visa%2C_Mastercard_and_American_Express_%28close-up_on_logos%29.jpg/280px-Three_credit_cards-_Visa%2C_Mastercard_and_American_Express_%28close-up_on_logos%29.jpg">
+        <p>Paga con tus métodos favoritos:</p>
+        <ul>
+            <li>Tarjeta de crédito/débito</li>
+            <li>PayPal</li>
+            <li>Transferencia bancaria</li>
+        </ul>
+    </div>
+
+     <!-- Formulario de pago -->
+     <div class="payment-form">
+        <h3>Información de Pago</h3>
+        <form action="#" method="post">
+            <label for="card-name">Nombre del Titular</label>
+            <input type="text" id="card-name" name="card-name" required>
+
+            <label for="card-number">Número de Tarjeta</label>
+            <input type="text" id="card-number" name="card-number" required maxlength="16">
+
+            <label for="expiry-date">Fecha de Expiración</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required maxlength="5">
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required maxlength="3">
+
+            <button type="submit">Procesar Pago</button>
+        </form>
+    </div>
+</div>
+
+</section>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(product, price) {
+        cart.push({ product, price });
+        total += price;
+        renderCart();
+    }
+
+    function renderCart() {
+        const cartItems = document.getElementById("cart-items");
+        const totalPrice = document.getElementById("total-price");
+        cartItems.innerHTML = "";
+        cart.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.product} - $${item.price}`;
+            cartItems.appendChild(li);
+        });
+        totalPrice.textContent = `Total: $${total}`;
+    }
+
+    function checkout() {
+        alert(`Total a pagar: $${total}. Procediendo al pago...`);
+    }
+</script>
+
+</body>
+</html>
